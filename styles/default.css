@@ -1,0 +1,28 @@
+/*Nav bar*/
+.header_navbar ul
+{
+  list-style-type: none;
+  background-color: #ba0737;
+  overflow: hidden;
+  margin: 0;
+}
+
+.header_navbar li
+{
+  float: left;
+  color: rgb(215, 193, 193);
+  margin: 0;
+}
+
+.header_navbar li a
+{
+  display: block;
+  color: rgb(240, 10, 10);
+  text-decoration: none;
+  padding: 5px;
+}
+
+.header_navbar li a:hover
+{
+  background-color: #0a0a0a;
+}
