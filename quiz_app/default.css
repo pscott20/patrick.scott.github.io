@@ -1,0 +1,102 @@
+:root {
+    background-color: #333;
+    font-size: 62.5%; /* This size is used because the default font size of most browsers is 16 pixels. 62.5% of 16 is 10. This way when we use rem the changes are increments of 10.*/
+}
+
+* {
+    box-sizing: border-box; /*If I add a border to a box then the border is included in the calculated size of the box.*/
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0; /*This and padding gives us control over margins and padding*/
+    padding: 0;
+    color: white;
+}
+
+h1 {
+    font-size: 5.4rem; /*5.4 * 10 pixels*/
+    color: lightblue;
+    margin-bottom: 5rem;
+}
+
+h1 > span {
+    font-size: 2.4rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+h3 { 
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+h4 {
+    margin-bottom: 1rem;
+}
+
+/*Utility Classes*/
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem; /*This sets the container size to 800px*/
+    margin: 0 auto; /*As the screen gets bigger the container stays a consistent size. As the screen gets smaller the container maintains formatting.*/
+}
+
+.container > * { /*Any child of container*/
+    width: 100%; /*This keeps things centered horizontally.*/
+    padding: 2rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Buttons*/
+.btn {
+    font-size: 1.8rem;
+    padding: 1rem 0;
+    width: 20rem;
+    text-align: center;
+    border: 0.1rem solid rgb(4, 156, 156);
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4 rem 0 rgb(0, 0, 0);
+    transform: translateY(-0.1rem);
+    transition: transform 150ms;
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
