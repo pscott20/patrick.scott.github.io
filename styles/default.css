@@ -1,23 +1,34 @@
+:root {
+  background-color: #313638;
+  font-size: 62.5%; /* This size is used because the default font size of most browsers is 16 pixels. 62.5% of 16 is 10. This way when we use rem the changes are increments of 10.*/
+}
+
+* {
+  box-sizing: border-box; /*If I add a border to a box then the border is included in the calculated size of the box.*/
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #E0DFD5;
+  margin: 0; /*This and padding gives us control over margins and padding*/
+  padding: 0;
+}
+
 /*Nav bar*/
 .header_navbar ul
 {
   list-style-type: none;
-  background-color: #ba0737;
+  background-color: #F09D51;
   overflow: hidden;
-  margin: 0;
+  margin: .5%;
 }
 
 .header_navbar li
 {
   float: left;
-  color: rgb(215, 193, 193);
-  margin: 0;
+  margin: .5%;
 }
 
 .header_navbar li a
 {
   display: block;
-  color: rgb(240, 10, 10);
   text-decoration: none;
   padding: 5px;
 }
