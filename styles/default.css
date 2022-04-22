@@ -11,29 +11,73 @@
   padding: 0;
 }
 
+/* Utility Classes */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80rem; /*This sets the container size to 800px*/
+  margin: 0 auto; /*As the screen gets bigger the container stays a consistent size. As the screen gets smaller the container maintains formatting.*/
+}
+
+.container > * { /*Any child of container*/
+  width: 100%; /*This keeps things centered horizontally.*/
+  padding: 2rem;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
 /*Nav bar*/
+.header h1 {
+  text-align: center;
+  font-size: 5rem;
+  padding: 2.0rem;
+}
+
 .header_navbar ul
 {
   list-style-type: none;
   background-color: #F09D51;
   overflow: hidden;
   margin: .5%;
+  padding: 0;
 }
 
 .header_navbar li
 {
   float: left;
   margin: .5%;
+  padding: 0;
 }
 
 .header_navbar li a
 {
   display: block;
   text-decoration: none;
-  padding: 5px;
+  padding: 0;
+  font-size: 1.5rem;
 }
 
 .header_navbar li a:hover
 {
   background-color: #0a0a0a;
+  transform: scale(1.15);
 }
