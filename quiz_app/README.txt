@@ -1,0 +1,1 @@
+The highscores data is saved in local storage and is not secure. 
