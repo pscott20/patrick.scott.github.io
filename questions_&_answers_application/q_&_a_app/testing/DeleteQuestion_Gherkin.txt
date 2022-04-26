@@ -1,0 +1,22 @@
+﻿#language: en
+
+
+Feature: Delete a post
+
+
+        As a user, I want to delete a post or question so I can remove a post if necessary.
+
+
+        Scenario: As a user, I want to delete a question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab on navigation bar
+                THEN I am taken to the specific users “All Questions” page
+                AND I should see a search bar
+                AND I should see the “Title” field of the question
+                AND I should see the “Date” field of the question
+                AND I should whether the question has been answered or not
+                AND I should see an “Edit” button
+                AND I should see a “Delete” button
+                AND I should see a “Report” button
+                WHEN I select the “Delete” button
+THEN I should see the Question and its fields completely removed from the users “All Questions” page

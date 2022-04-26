@@ -1,0 +1,34 @@
+﻿#language: en
+
+
+Feature: Reply to a question or post
+
+
+All users are able to submit responses to questions or posts. The amount of responses to a single question/post is unlimited. The responses are sorted by most recent at the top. 
+
+
+Scenario: As a user, I want to reply to a question or post so I may be able to give feedback, answer, or ask another question to the original post.
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab
+THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I select on a specific Question’s title
+                THEN I should be taken to the Question’s specific page
+                AND I should see an upvote button
+                AND I should see a downvote button
+                AND I should see a score
+                AND I should see the title of the Question
+                AND I should see the text of the Question
+                AND I should see the date of the Question
+                AND I should see the image corresponding to the Question (if any)
+                AND I should be see whether the question has been answered or not
+                WHEN I select the the text box under the header “Add Comment”
+                THEN I enter my response in the “Text” field
+                WHEN I select the “Add Comment” button
+                THEN I should see my response under the initial post

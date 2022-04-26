@@ -1,0 +1,55 @@
+
+{% extends "layout.html" %}
+  {% block title %}
+
+  {% endblock title %}
+
+  {% block content %}
+    <h1>{{ user }}s' Questions</h1>
+
+    <!--Text form for the search bar that calls the search function in QA.py-->
+   <form method="GET" action="/search">
+        <input type="text" name="search" placeholder="Search..." />
+       <button type="submit" value="Submit">Submit</button>
+    </form>
+
+    <div class = "questions-table">
+      <table>
+        <tr>
+          <th>Title</th>    <!--Title header for an individual Question in Questions Table-->
+          <th>Date</th>     <!--Date header for an individual Question in Questions Table-->
+          <th>Status</th>   <!--Status header for answered unanswered selection-->
+        </tr>
+
+          <!--for loop that gets all the questions from user and displays the title, date, status, and buttons-->
+        {% for question in questions %}
+            <tr>
+              <td>
+                <!--Title for an individual Question in users Questions-->
+                <a href="{{ url_for('get_question', q_id=question.id) }}">{{ question.title }}</a>
+              </td>
+              <td>{{ question.date }}</td>      <!--Date for an individual Question in users Questions-->
+              <td>{{ question.status }}</td>    <!--Status for answered unanswered selection-->
+              <td>
+                  <!--Edit Button (Changes edit to a button that matches delete)-->
+                  <a href="{{ url_for('update_question', q_id=question.id) }}">
+                  <input type="submit" value="Edit" /></a>
+              </td>
+              <td>
+                  <!--Delete Button-->
+                <form action="{{ url_for('delete_question', q_id=question.id) }}" method="post">
+                  <input type="submit" value="Delete" />
+                </form>
+              </td>
+                <!--Report Button-->
+              <td>
+                  <form action="{{ url_for('report_question') }}">
+                      <input type="submit" value="Report" />
+                  </form>
+              </td>
+
+            </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% endblock content %}

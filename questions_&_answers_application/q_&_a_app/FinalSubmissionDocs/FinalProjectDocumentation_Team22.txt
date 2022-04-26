@@ -1,0 +1,470 @@
+﻿Cameron Talbert
+Drew Robieson
+Patrick Scott
+Team 22 Project
+
+
+
+
+
+
+COMPLETE DFD AND MODEL RELATIONSHIP DIAGRAMS
+Relational Diagram
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+Level 0 DFD
+
+
+  
+
+Level 1 DFD
+  
+
+
+
+
+
+
+
+USER STORIES
+1. As a user, I want to create a post so I can have my question answered.
+2. As a user, I want to edit a post so I may correct grammar, clarify, or modify any important information in the post.
+3. As a user, I want to view a question or post so I can respond to the post.
+4. As a user, I want to reply to a question or post so I may be able to give feedback, answer, or ask another question to the original post.
+5. As a user, I want to delete a post or question so I can remove a post if necessary.
+6. As a user, I want to be able to create an account that saves the posts and replies I have made.
+7. As a user, I want to  be able to view a list of all posts and questions that I have made.
+8. As a user, I want to be able to login to an account so I may view answered or unanswered posts.
+9. As a user, I want to mark a question "answered" or "unanswered" so I may be able to help the community and myself determine whether the question was wholly and accurately answered.
+10. As a user, I want to add images to my posts and replies.
+11. As a user, I want to be able to upvote or downvote questions and answers so I may be able to help determine relevance and accuracy of the questions or answers.
+12. As a user, I want to be able to search through previous posts so that I can find relevant information.
+
+
+CURRENT FEATURES
+Base Features:
+1. List questions/posts
+2. View a question/post
+3. Create a question/post
+4. Edit an question/post
+5. Reply to a question/post
+6. Delete an question/post
+7. Register a user
+8. User sign-in
+Additional Features:
+1. Ability upvote and downvote questions and answers 
+2. Attach an image to a post
+3. Marking answered or unanswered 
+4. Search bar for posts
+
+
+
+
+
+
+________________
+
+
+ACCEPTANCE CRITERIA FOR TESTING (GHERKIN)
+#language: en
+
+
+Feature: Create account
+        
+As a user, I want to be able to create an account that saves the posts and replies I have made.
+
+
+        Scenario: As a user, I want to create an account
+                GIVEN I am on the homepage
+                WHEN I click the “Register” tab on the hot bar
+                THEN I am taken to the Registration page
+THEN I can enter a username, password, first name, last name, and email address
+                WHEN I select the corresponding input boxes
+                THEN I can click the “Submit” button and complete the registration process
+________________
+
+
+
+
+Feature: Login to the account
+        
+As a user, I want to sign in to my account so that I can see my previous activity and questions.
+
+
+        Scenario: As a user, I want to login to an account
+                GIVEN I am on the homepage
+                WHEN I click the “Sign in” tab on the hot bar
+                THEN I am taken to the Login page
+THEN I can enter a valid email address and password
+                WHEN I select the corresponding input boxes
+                THEN I can click the “Submit” button and complete the Login process
+                AND I am taken to my “All Questions” page 
+________________
+
+
+
+
+Feature: View a list of your Questions or posts
+
+
+As a user, I want to  be able to view a list of all posts and questions that I have made.
+
+
+Scenario: As a user, I want to view all of the available questions from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab 
+                THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+________________
+
+
+        
+Feature: View a Question or Post
+
+
+As a user, I want to view a question or post so I can respond to the post.
+
+
+Scenario: As a user, I want to view a question or post starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab 
+                THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I click on a specific question’s “Title”
+                THEN I am taken to that specific question or post’s page
+                AND I should see an upvote button
+                AND I should see a downvote button
+                AND I should see a score
+                AND I can see the title of the question
+                AND I can see the Question
+                AND I can see the Question’s date
+                AND I can see the Question’s picture (if applicable)
+                AND I can see whether the question was answered or not
+________________
+
+
+
+
+Feature: Edit a post or question
+
+
+As a user, I want to edit a post so I may correct grammar, clarify, or modify any important information in the post.
+
+
+Scenario: As a user, I want to edit a post or question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab on navigation bar
+                THEN I am taken to the <user’s> ”All Questions” page
+                AND I should see a search bar
+                AND I can see the title of the question each question in table format 
+                AND I can see the date of the question each question in table format 
+                AND I can whether the question has been answered or not
+AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I select the “edit” button to the right of the Question 1 box
+                THEN I should be on the “Edit Question” page
+                AND I should see the title field
+                AND I should see the text field
+AND I have to select whether the question is answered or not
+                WHEN I am done making changes to the specific question
+                THEN I select the “Update Question” button
+                WHEN I select the “Update Question” button
+                THEN the changes will be saved respectively in the database
+                AND I am taken back to <user’s> “All Questions” page
+________________
+
+
+
+
+Feature: Reply to a question or post
+
+
+All users are able to submit responses to questions or posts. The amount of responses to a single question/post is unlimited. The responses are sorted by most recent at the top. 
+
+
+Scenario: As a user, I want to reply to a question or post so I may be able to give feedback, answer, or ask another question to the original post.
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab
+THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I select on a specific Question’s title
+                THEN I should be taken to the Question’s specific page
+                AND I should see an upvote button
+                AND I should see a downvote button
+                AND I should see a score
+                AND I should see the title of the Question
+                AND I should see the text of the Question
+                AND I should see the date of the Question
+                AND I should see the image corresponding to the Question (if any)
+                AND I should be see whether the question has been answered or not
+                WHEN I select the the text box under the header “Add Comment”
+                THEN I enter my response in the “Text” field
+                WHEN I select the “Add Comment” button
+                THEN I should see my response under the initial post
+________________
+
+
+
+
+Feature: Create a post with an image
+
+
+        As a user, I want to create a post with an image so I can have my question answered.
+
+
+        Scenario: As a user, I want to post a new question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “Ask A Questions” tab on navigation bar
+                THEN I am taken to the “Ask a Questions” page
+                AND I should see the “Title” field to add the title
+                AND I should see the “Question” field to add the text for the question or post
+                AND I should see an “Upload Image” button to select image
+                WHEN I select the “Title” field
+                THEN I should be able to add text for the title
+                WHEN I select the “Question” field
+                THEN I should be able to add text for the question
+                WHEN I select the “Choose Files” button
+                THEN I should see a pop-up window for my computers files
+                AND I should be able to select an image only from my computer
+                AND I should be able to add that image to the question
+                AND I should be able to see that image’s filename next to “Upload Files” button
+                WHEN I select the “Add Question” button
+                THEN the new post should be saved as a new entry in the database
+                AND I should be taken back to the “My Questions” page
+                AND the new post should be available to view on the “My Questions” page
+________________
+
+
+
+
+Feature: Create a post with no image
+
+
+        As a user, I want to create a post (no image) so I can have my question answered.
+
+
+        Scenario: As a user, I want to post a new question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “Ask A Questions” tab on navigation bar
+                THEN I am taken to the “Ask a Questions” page
+                AND I should see the “Title” field to add the title
+                AND I should see the “Question” field to add the text for the question or post
+                AND I should see an “Upload Image” button to select image
+                WHEN I select the “Title” field
+                THEN I should be able to add text for the title
+                WHEN I select the “Question” field
+                THEN I should be able to add text for the question
+                WHEN I select the “Add Question” button
+                THEN the new post should be saved as a new entry in the database
+                AND I should be taken back to the “My Questions” page
+                AND the new post should be available to view on the “My Questions” page
+________________
+
+
+
+
+Feature: Delete a post
+
+
+        As a user, I want to delete a post or question so I can remove a post if necessary.
+
+
+        Scenario: As a user, I want to delete a question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab on navigation bar
+                THEN I am taken to the specific users “All Questions” page
+                AND I should see a search bar
+                AND I should see the “Title” field of the question
+                AND I should see the “Date” field of the question
+                AND I should whether the question has been answered or not
+                AND I should see an “Edit” button
+                AND I should see a “Delete” button
+                AND I should see a “Report” button
+                WHEN I select the “Delete” button
+THEN I should see the Question and its fields completely removed from the users “All Questions” page
+________________
+
+
+
+
+Feature: Search bar
+
+
+As a user, I want to be able to search through previous questions so that I can find relevant information.
+
+
+Scenario: As a user, I want to search through previous questions starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab on navigation bar
+                THEN I am taken to the specific users “All Questions” page
+                AND I should see a search bar
+                AND I should see the “Title” field of the question
+                AND I should see the “Date” field of the question
+                AND I should whether the question has been answered or not
+                AND I should see an “Edit” button
+                AND I should see a “Delete” button
+                AND I should see a “Report” button
+                WHEN I type in alphanumeric characters in the text field of the search bar
+                AND I hit the “Submit button”
+                THEN I should be taken to a “Searching” page
+AND I should see any questions that have the alphanumeric characters typed in their title        
+________________
+
+
+
+
+        Feature: Upvote or Downvote feature
+
+
+As a user, I want to be able to upvote or downvote questions and answers so I may be able to help determine relevance and accuracy of the questions or answers.
+
+
+Scenario: As a user, I want to upvote or downvote questions starting from the homepage
+        GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab
+THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I select on a specific Question’s title
+                THEN I should be taken to the Question’s specific page
+                AND I should see an upvote button
+                AND I should see a downvote button
+                AND I should see a score
+                AND I should see the title of the Question
+                AND I should see the text of the Question
+                AND I should see the date of the Question
+                AND I should see the image corresponding to the Question (if any)
+                AND I should see whether the question has been answered or not
+                WHEN I select the green “Upvote” button
+THEN the Score number between the “Upvote” and “Downvote” buttons should increase by 1
+                WHEN I select the red “Downvote” button
+THEN the Score number between the “Upvote” and “Downvote” buttons should decrease by 1
+________________
+
+
+
+
+        Feature: Report a Question feature
+
+
+As a user, I want to be able to upvote or downvote questions and answers so I may be able to help determine relevance and accuracy of the questions or answers.
+
+
+Scenario: As a user, I want to upvote or downvote questions starting from the homepage
+        GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab
+THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I select the Report button
+                THEN I should be taken to the “Report a Question” page
+                AND I should see the text “Reason”
+                AND I should see a radial button with the label “Inappropriate Language”
+                AND I should see a radial button with the label “Bad Image”
+                AND I should see radial button with the label “Other”
+                AND I should see the text “Description”
+                AND I should see a text field to input data
+                AND I should see a “Report Question” button
+                WHEN I select a radial button
+AND type in the text field below “Description” 
+AND I click the “Report Question” button
+                THEN the form should be sent to the administrators for review (not implemented)
+                AND I should be returned to the users “All Questions” page
+
+
+________________
+
+
+USER GUIDE FOR FEATURES
+
+
+List questions or posts: Login and use the navigation bar at the top of the screen to go to the page titled All Questions.
+View a question or post: Login and navigate to the All Questions page. Then find the post you want to view and click on its title. 
+Create a question or post: Login and use the navigation bar at the top of the screen to go to the page titled New Question. Next, input a title, body, and image (optional) for your post and click the submit button at the bottom of the screen.
+Edit a question or post: Login and navigate to the All Questions page. Next, find the question you want to edit and click the edit button next to it. Now you will be on a page where you can update the title, body, and mark the question as answered or unanswered. Once you’re done making changes you can click the submit button. 
+Reply to a question or post: Login, navigate to the All Questions page and select the question you would like to comment on. Once on the specific question page, enter your comment in the input box and press the submit button when you’re finished.
+Delete a question or post: Login and navigate to the All Questions page. Then find the question you want to delete and click the delete button to the right of its title. 
+Register a user: Using the navigation bar, go to the page titled Sign Up. On the signup page, enter your name, email address, and password in their corresponding fields. Then click the register button to create an account. 
+User sign-in: Navigate to the Login page using the navigation bar. Enter the email and password you used to register and click the submit button.
+Ability to upvote and downvote questions and answers: Login and navigate to the All Questions page. From here you can select a specific question and be taken to that questions page.  Here you should see two buttons with a number between them.  The first green button labeled “Upvote” will increment the number below it by one when pressed.  The second red button labeled “Downvote” will decrement the number above it by one when pressed.
+
+
+Attach an image to a post: Create a new  question as described in the ‘Create a question or post’ feature above then click the choose files button on the page and select an image you would like to attach.
+
+
+Marking answered or unanswered: Navigate to the All Questions page and click the edit button next to  a question. Then use the buttons at the bottom of the edit page to update the question’s status to answered or unanswered.
+
+
+Search bar for posts: Login and navigate to the All Questions page. Next, click on the search bar and type in a post title you would like to search for then press the submit button. This will take you to a page with all the questions that have similar titles to the keywords you searched for. When you’re finished, you can click the back to questions button to navigate back to the All Questions page.
+
+
+
+
+________________
+
+
+ETHICAL CONSIDERATIONS AND PLANS TO ADDRESS THEM
+* Attach Images to a post: To prevent users from seeing inappropriate images we would create a system for users to report inappropriate images.  We would also create a system for the user that attached the image to be able to tag their image as graphic and would add an extra setting for everyone to choose to have graphic images hidden or visible.
+* Create/edit  question or post-To prevent inappropriate words from being used we would create a filter preventing inappropriate words from being used in posts. We would also  create a form to report posts that contain inappropriate text and images 
+* Register a user- To prevent the creation of false accounts, we would include a verification process when a user registers a new account.
+* Ability to upvote and downvote questions and answers- To prevent invalid upvotes and downvotes, we would create a system. (i.e. group attacking a user) 
+* Reporting a user for attack -  To prevent the spread of malicious intent, attacking a user, or attacking a post, we would create a system to report users that may be doing this.
+
+
+
+
+SCREENSHOT OF TRELLO BACKLOG
+  
+  
+  
+
+MAJOR CHANGES, THEIR IMPACT, AND HOW THEY WERE ADDRESSED
+
+
+* One major challenge we had was collaborating on GitHub and learning how to properly push, pull, branch, and merge our changes without losing anything.
+   * We mitigated this challenge by using the Git Cheatsheet on Canvas and Googling the various error messages we received to find out what went wrong when we tried to push/pull/branch. 
+* We also faced challenges when implementing the additional features:
+   * When attaching an image to a post, we initially had to decide on where to store the images. Also, when it was first implemented, the images were showing up as broken.
+   * The upvote/downvote feature was complex and took way longer than we expected to implement
+   * Using SQLite with python was also new to us and figuring out how to access the tuples in the Question table of the database and match them to the user’s input to add the search bar initially served as a challenge.

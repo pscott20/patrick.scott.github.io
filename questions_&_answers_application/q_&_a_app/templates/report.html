@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+  {% block title %}
+
+  {% endblock title %}
+
+  {% block content %}
+        <h1>Report a Question</h1>
+            <!--Form for the Report page)-->
+            <form action="{{ url_for('get_questions') }}" >
+
+            <p><label>Reason </label></p>
+            <!--Radio Button for "Inappropriate Language"-->
+            <input type="radio" id="reason1" name="r" value="Inappropriate Language" required>
+            <label for="reason1"> Inappropriate Language</label><br>
+            <!--Radio Button for "Bad Image"-->
+            <input type="radio" id="reason2" name="r" value="Bad Image" required>
+            <label for="reason2"> Bad Image</label><br>
+            <!--Radio Button for "Other" reasons-->
+            <input type="radio" id="reason3" name="r" value="Other" required>
+            <label for="reason3"> Other</label>
+
+
+            <p><label>Description </label></p>
+            <p>
+                <!--Text Area to give "description" for report-->
+                <textarea name="noteText" rows="6" cols="0" required></textarea>
+                <p></p>
+                <!--Submit Button for report-->
+                <input type="submit" value="Report Question"/>
+
+            </form>
+
+
+    {% endblock content %}

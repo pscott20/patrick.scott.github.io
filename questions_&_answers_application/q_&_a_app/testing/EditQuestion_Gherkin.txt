@@ -1,0 +1,30 @@
+﻿#language: en
+
+
+Feature: Edit a post or question
+
+
+As a user, I want to edit a post so I may correct grammar, clarify, or modify any important information in the post.
+
+
+Scenario: As a user, I want to edit a post or question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab on navigation bar
+                THEN I am taken to the <user’s> ”All Questions” page
+                AND I should see a search bar
+                AND I can see the title of the question each question in table format 
+                AND I can see the date of the question each question in table format 
+                AND I can whether the question has been answered or not
+AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I select the “edit” button to the right of the Question 1 box
+                THEN I should be on the “Edit Question” page
+                AND I should see the title field
+                AND I should see the text field
+AND I have to select whether the question is answered or not
+                WHEN I am done making changes to the specific question
+                THEN I select the “Update Question” button
+                WHEN I select the “Update Question” button
+                THEN the changes will be saved respectively in the database
+                AND I am taken back to <user’s> “All Questions” page

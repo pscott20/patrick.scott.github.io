@@ -1,0 +1,56 @@
+ {% extends "layout.html" %}
+  {% block title %}
+
+  {% endblock title %}
+
+  {% block content %}
+        {% if question %}
+            <form action="{{ url_for('update_question', q_id=question.id) }}" method="post" enctype="multipart/form-data">
+            <h1>Edit Question</h1>
+        {% else %}
+            <form action="new" method="post" enctype="multipart/form-data">
+            <h1>Ask A New Question</h1>
+        {% endif %}
+            <p><label>Title </label></p>
+            <p><input type="text" name="title" value="{% if question %} {{question.title}} {% endif %}"/></p>
+            <p><label>Question </label></p>
+            <p>
+                <textarea name="noteText"  rows="6" cols="0" >
+                {% if question %}
+                    {{question.text}}
+                {% else %}
+                    Add your new question here ...
+                {% endif %}
+                </textarea>
+            <p></p>
+
+            {% if not question %}                                       <!-- checks if its not editing question -->
+            <p><label>Upload Image</label></p>                          <!-- label for Upload Image -->
+            <dl>
+                <p>
+                    <input type="file" name="file" multiple accept="image/*" autocomplete="off">  <!-- upload image only-->
+                </p>
+            </dl>
+            {% endif %}
+
+            {% if question %}
+                <!-- Radios to select question status-->
+                <p>Select question status:</p>
+                <div class = "question-text">
+                <input type = "radio" id="answered" name="qstatus" value="Answered" required>
+                    <label for="answered" style="color:White;">Answered</label>
+                <input type = "radio" id="unanswered" name="qstatus" value="Unanswered" required>
+                    <label for="unanswered" style="color:White;">Unanswered</label><br><br>
+                <!--End of select question status section-->
+
+                <input type="submit" value="Update Question"/>
+            {% else %}
+                <input type="submit" value="Add Question"/>
+                <input type ="hidden" id="hidden" name="qstatus" value="Unanswered"/> <!--Hidden input to automatically set a new question to "Unanswered".-->
+            {% endif %}
+
+
+            </form>
+            </form>
+
+    {% endblock content %}

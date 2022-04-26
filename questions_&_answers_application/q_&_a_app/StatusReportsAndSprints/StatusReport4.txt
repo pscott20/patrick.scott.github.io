@@ -1,0 +1,23 @@
+Team 22 Status Report 4
+
+Section 1: Goals from a week ago
+Continuation of FLASK application (databases)
+Work on sprint 4 with testing
+Continue to work on application development
+
+Section 2: Progress made this week
+Updated Trello page
+Created features and scenarios for 4 user stories
+
+
+
+Section 3: Plans & Goals for next week
+Complete Sprint 5 - create an MVP or minimum viable product
+Start the development of the design
+Start the implementation of flask into product 
+
+
+Section 4: Instructional Team Meeting Agenda
+
+N/A
+

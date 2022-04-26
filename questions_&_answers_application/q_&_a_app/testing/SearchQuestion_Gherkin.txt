@@ -1,0 +1,24 @@
+﻿#language: en
+
+
+Feature: Search bar
+
+
+As a user, I want to be able to search through previous questions so that I can find relevant information.
+
+
+Scenario: As a user, I want to search through previous questions starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab on navigation bar
+                THEN I am taken to the specific users “All Questions” page
+                AND I should see a search bar
+                AND I should see the “Title” field of the question
+                AND I should see the “Date” field of the question
+                AND I should whether the question has been answered or not
+                AND I should see an “Edit” button
+                AND I should see a “Delete” button
+                AND I should see a “Report” button
+                WHEN I type in alphanumeric characters in the text field of the search bar
+                AND I hit the “Submit button”
+                THEN I should be taken to a “Searching” page
+AND I should see any questions that have the alphanumeric characters typed in their title

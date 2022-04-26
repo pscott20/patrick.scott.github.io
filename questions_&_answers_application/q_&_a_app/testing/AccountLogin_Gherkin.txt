@@ -1,0 +1,16 @@
+﻿#language: en
+
+
+Feature: Login to the account
+        
+As a user, I want to sign in to my account so that I can see my previous activity and questions.
+
+
+        Scenario: As a user, I want to login to an account
+                GIVEN I am on the homepage
+                WHEN I click the “Sign in” tab on the hot bar
+                THEN I am taken to the Login page
+THEN I can enter a valid email address and password
+                WHEN I select the corresponding input boxes
+                THEN I can click the “Submit” button and complete the Login process
+                AND I am taken to my “All Questions” page

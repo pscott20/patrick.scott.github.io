@@ -1,0 +1,29 @@
+﻿#language: en
+
+
+Feature: Create a post with an image
+
+
+        As a user, I want to create a post with an image so I can have my question answered.
+
+
+        Scenario: As a user, I want to post a new question starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “Ask A Questions” tab on navigation bar
+                THEN I am taken to the “Ask a Questions” page
+                AND I should see the “Title” field to add the title
+                AND I should see the “Question” field to add the text for the question or post
+                AND I should see an “Upload Image” button to select image
+                WHEN I select the “Title” field
+                THEN I should be able to add text for the title
+                WHEN I select the “Question” field
+                THEN I should be able to add text for the question
+                WHEN I select the “Choose Files” button
+                THEN I should see a pop-up window for my computers files
+                AND I should be able to select only an image from my computer
+                AND I should be able to add that image to the question
+                AND I should be able to see that image’s filename next to “Upload Files” button
+                WHEN I select the “Add Question” button
+                THEN the new post should be saved as a new entry in the database
+                AND I should be taken back to the “My Questions” page
+                AND the new post should be available to view on the “My Questions” page

@@ -1,0 +1,129 @@
+body {
+  background-color: rgb(53, 51, 51);
+}
+
+h1,h4,h5,h6,p{
+      font-family: "Poppins", "Arial", sans-serif;
+      color: white;
+}
+
+table th{
+    font-family: "Poppins", "Arial", sans-serif;
+    color: white;
+    padding: 5px;
+}
+
+table td{
+    font-family: "Poppins", "Arial", sans-serif;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+h2{
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 30px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h3{
+    font-family: "Poppins", "Arial", sans-serif;
+    font-size: 25px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+label{
+    color: white;
+}
+
+.navigation {
+  background-color: rgb(8, 8, 8);
+  margin: 0px;
+  padding: 10px;
+}
+
+.navigation p {
+    padding-bottom: 15px;
+}
+
+.navigation a {
+  list-style-type: none;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* hover effect of navlist anchor element */
+.navigation a:hover {
+  color: grey;
+  border-style: ridge;
+  border-color: grey;
+}
+
+.questions-table {
+  position: relative;
+  left: 0%;
+  top: 0px;
+  width: 30%;
+  box-shadow: 0 0 5px rgba(65, 67, 144, 0.1);
+  padding: 10px;
+}
+
+.questions-table th{
+    color: white;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.questions-table td{
+    color: white;
+    padding: 4px;
+}
+
+.questions-table td a{
+    color: white;
+}
+
+ul li{
+    color: white;
+}
+
+.votebuttons {
+    left: 1%;
+}
+
+.upvote {
+      margin: 10px;
+}
+
+.upvote input[type="submit"] {
+    width: 80px;
+    border: none;
+    background-color: #22AF0E;
+}
+
+.upvote input[type="submit"]:hover {
+    border: none;
+    background-color: #127B03;
+}
+
+.downvote {
+      margin: 10px;
+}
+
+.downvote input[type="submit"] {
+    width: 80px;
+    border: none;
+    background-color: #F7102C;
+}
+
+.downvote input[type="submit"]:hover {
+    border: none;
+    background-color: #BA051B;
+}

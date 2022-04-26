@@ -1,0 +1,21 @@
+Team 22 Status Report 1
+Section 1: Goals from a week ago
+N/a (First report)
+
+Section 2: Progress made this week
+Setup Trello page
+Created product backlog with user stories for the features we plan to implement
+Created public repository
+Established line of communication through Discord
+
+
+Section 3: Plans & Goals for next week
+Wireframes
+Lo-Fi Storyboards
+Storyboards
+Continuation of FLASK application (focus on templates)
+
+
+Section 4: Instructional Team Meeting Agenda
+
+N/A

@@ -1,0 +1,79 @@
+ {% extends "layout.html" %}
+  {% block title %}
+
+  {% endblock title %}
+
+  {% block content %}
+        <h1>Question Details</h1>
+            <div class="questions-table">
+                <table>
+                    <tr>
+                        <th>        </th>
+                        <th>Title</th>  <!--Question title header-->
+                        <th>Text</th>   <!--Question text header-->
+                        <th>Date</th>   <!--Question date header-->
+                        <th>Status</th> <!--Question status-answered/unanswered-->
+                    </tr>
+                    <tr>
+                        <td>
+                            <!--Question div for the upvote and downvote buttons-->
+                            <div class="votebuttons">
+                                <form action="{{ url_for('vote_score', q_id=question.id) }}" method="post">
+                                    <input type="hidden" name="vote_score_zero" value="0" />
+                                </form>
+                                <!--Question div for the upvote button that increments by 1 on each click-->
+                                <div class="upvote">
+                                    <form action="{{ url_for('vote_score', q_id=question.id) }}" method="post">
+                                        <input type="number" value="1" name="upvote" hidden="hidden">
+                                            <input type="submit" value="Upvote" id="upvotebutton">
+                                    </form>
+                                </div>
+                                <!--Question div for the total score of the vote of the Question-->
+                                <div class="questionscore">
+                                    {{ question_score.vote }}
+
+                                </div>
+                                <!--Question div for the downvote button that decrements by 1 on each click-->
+                                <div class="downvote">
+                                    <form action="{{ url_for('vote_score', q_id=question.id) }}" method="post">
+                                        <input type="number" value="-1" name="downvote" hidden="hidden">
+                                        <input type="submit" value="Downvote" id="downvotebutton">
+                                    </form>
+                                </div>
+                            </div>
+            </div>
+
+                        </td>
+                        <td>{{ question.title }}</td>   <!--Question title context-->
+                        <td>{{ question.text }}</td>    <!--Question text context-->
+                        <td>{{ question.date }}</td>    <!--Question date context-->
+                        <td>{{ question.status }}</td>  <!--Question status-answered/unanswered-->
+
+                    </tr>
+                </table>
+
+
+            <img src="/static/img/{{ question.image_file }}">  <!-- pulls the image file saved with the question -->
+
+
+        <!--Comment Section for the Question-->
+        {% if question.comments %}
+          {% if question.comments|length > 0 %}
+            <h2>Comments</h2>
+            <ul>
+            {% for comment in question.comments %}
+              <li>{{ comment.content }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endif %}
+        <form action="{{ url_for('new_comment', q_id=question.id) }}" method="post">
+          <div class="formwrapper">
+            <h2 class="title">Add a comment</h2>
+            <div class="form-field">
+              {{ form.comment.label }} <br/> {{ form.comment }}
+            </div>
+            {{ form.submit }}
+          </div>
+        </form>
+ {% endblock content %}

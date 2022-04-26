@@ -1,0 +1,26 @@
+Team 22 Status Report 2
+
+Section 1: Goals from a week ago
+Wireframes
+Lo-Fi Storyboards
+Storyboards
+Continuation of FLASK application (focus on templates)
+
+Section 2: Progress made this week
+Updated Trello page
+Created basic wireframes for application
+Used wireframes to complete a storyboard of our application
+Considered Ethical issues and created potential mitigation of each issue
+
+
+Section 3: Plans & Goals for next week
+Focus of Data Flow Diagrams for application
+Flask application - navigate, create, and show
+Continue to work on application development
+
+
+Section 4: Instructional Team Meeting Agenda
+
+N/A
+
+

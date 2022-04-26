@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="UNCC Q&A App" />
+    <title>UNCC QA App</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+
+    {% block title %}
+
+    {% endblock title %}
+
+  </head>
+
+  <body>
+    {% block nav %}
+      <div class="navigation">
+        <center><h2>UNCC</h2></center>
+        <center><h3>Questions & Answers</h3></center>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="/questions">All Questions</a>
+        <a href="{{ url_for('new_question') }}">Ask a Question</a>
+        {% if user %}
+          <a href="{{ url_for('logout') }}">Logout</a>
+        {% else %}
+            <a href="{{ url_for('login') }}">Sign In</a>
+            <a href="{{ url_for('register') }}">Register</a>
+        {% endif %}
+      </div>
+    {% endblock nav %}
+
+    {% block content %}
+
+    {% endblock content %}
+
+  </body>
+</html>

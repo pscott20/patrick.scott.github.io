@@ -1,0 +1,15 @@
+﻿#language: en
+
+
+Feature: Create account
+        
+As a user, I want to be able to create an account that saves the posts and replies I have made.
+
+
+        Scenario: As a user, I want to create an account
+                GIVEN I am on the homepage
+                WHEN I click the “Register” tab on the hot bar
+                THEN I am taken to the Registration page
+THEN I can enter a username, password, first name, last name, and email address
+                WHEN I select the corresponding input boxes
+                THEN I can click the “Submit” button and complete the registration process

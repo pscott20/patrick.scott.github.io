@@ -1,0 +1,30 @@
+﻿#language: en
+
+
+Feature: View a Question or Post
+
+
+As a user, I want to view a question or post so I can respond to the post.
+
+
+Scenario: As a user, I want to view a question or post starting from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab 
+                THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
+                WHEN I click on a specific question’s “Title”
+                THEN I am taken to that specific question or post’s page
+                AND I should see an upvote button
+                AND I should see a downvote button
+                AND I should see a score
+                AND I can see the title of the question
+                AND I can see the Question
+                AND I can see the Question’s date
+                AND I can see the Question’s picture (if applicable)
+                AND I can see whether the question was answered or not

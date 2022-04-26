@@ -1,0 +1,22 @@
+Team 22 Status Report 3
+Section 1: Goals from a week ago
+Focus of Data Flow Diagrams for application
+Flask application - navigate, create, and show
+Continue to work on application development
+
+Section 2: Progress made this week
+Updated Trello page
+Updated and labeled Lo-Fi diagrams with function names, View name, database field names, and route methods
+Created a Context and Level 1 Data Flow Diagram
+Created a model and association diagram for User Account, Administrator Account, Database, Questions, and Comments
+
+
+Section 3: Plans & Goals for next week
+Continuation of FLASK application (databases)
+Work on sprint 4 with testing
+Continue to work on application development
+
+
+Section 4: Instructional Team Meeting Agenda
+
+N/A

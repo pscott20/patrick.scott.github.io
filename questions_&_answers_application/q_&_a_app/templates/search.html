@@ -1,0 +1,72 @@
+<!--{% extends "layout.html" %} -->
+  <!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="UNCC Q&A App" />
+    <title>UNCC QA App</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}"/>
+
+    {% block title %}
+
+    {% endblock title %}
+
+  </head>
+
+<body>
+{% block nav %}
+      <div class="navigation">
+        <center><h2>UNCC</h2></center>
+        <center><h3>Questions & Answers</h3></center>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="/questions">All Questions</a>
+        <a href="{{ url_for('new_question') }}">Ask a Question</a>
+          <a href="{{ url_for('logout') }}">Logout</a>
+      </div>
+  {% endblock nav %}
+
+  {% block content %}
+   <h1>Searching...</h1>
+
+    <form action="{{ url_for('get_questions') }}">
+        <input type="submit" value="Back to All Questions">
+    </form>
+
+    <div class = "questions-table">
+      <table>
+        <tr>
+          <th>Title</th>
+          <th>Date</th>
+          <!--Status for answered unanswered selection-->
+          <th>Status</th>
+        </tr>
+        {% for question in questions %}
+            <tr>
+              <td>
+                <a href="{{ url_for('get_question', q_id=question.id) }}">{{ question.title }}</a>
+              </td>
+              <td>{{ question.date }}</td>
+              <td>{{ question.status }}</td>
+              <!--Status for answered unanswered selection-->
+              <!--<td><a href="{{ url_for('update_question', q_id=question.id) }}">Edit</a> Original code for edit hyperlink-->
+              <td>
+              <a href="{{ url_for('update_question', q_id=question.id) }}">
+              <!--Changes edit to a button that matches delete-->
+              <input type="submit" value="Edit" /></a>
+              </td>
+              <td>
+                <form action="{{ url_for('delete_question', q_id=question.id) }}" method="post">
+                  <input type="submit" value="Delete" />
+                </form>
+              </td>
+            </tr>
+        {% endfor %}
+      </table>
+    </div>
+  {% endblock content %}
+</body>
+</html>

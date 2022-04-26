@@ -1,0 +1,20 @@
+﻿#language: en
+
+
+Feature: View a list of your Questions or posts
+
+
+As a user, I want to  be able to view a list of all posts and questions that I have made.
+
+
+Scenario: As a user, I want to view all of the available questions from the homepage
+                GIVEN I am on the homepage after logging in or registering
+                WHEN I select the “All Questions” tab 
+                THEN I am taken to the <user’s> “All Questions” page
+                AND I should see a search bar
+                AND I can see each Question’s “Title”
+                AND I can see each Question’s “Date”
+                AND I can see whether each Question has been answered or not
+                AND I can see an “Edit” button
+                AND I can see a “Delete” button
+                AND I can see a “Report” button
