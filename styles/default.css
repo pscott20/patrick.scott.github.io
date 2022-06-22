@@ -13,36 +13,23 @@
 
 /* Utility Classes */
 .container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80rem; /*This sets the container size to 800px*/
-  margin: 0 auto; /*As the screen gets bigger the container stays a consistent size. As the screen gets smaller the container maintains formatting.*/
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80rem; /*This sets the container size to 800px*/
+    margin: 0 auto; /*As the screen gets bigger the container stays a consistent size. As the screen gets smaller the container maintains formatting.*/
 }
 
-.container > * { /*Any child of container*/
-  width: 100%; /*This keeps things centered horizontally.*/
-  padding: 2rem;
+.container h1 {
+    font-size: 4rem;
+    padding: 1rem;
 }
 
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-center {
-  justify-content: center;
-  align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.text-center {
-  text-align: center;
+.container a {
+    padding: 0.5rem;
+    font-size: 2rem;
 }
 
 /*Nav bar*/
@@ -72,12 +59,13 @@
 {
   display: block;
   text-decoration: none;
-  padding: 0;
+  color: #313638;
+  padding: 0 0.5rem 0 0.5rem;
   font-size: 1.5rem;
 }
 
 .header_navbar li a:hover
 {
-  background-color: #0a0a0a;
+  background-color: #f7ae69;
   transform: scale(1.15);
 }
