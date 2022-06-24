@@ -23,19 +23,34 @@
 }
 
 /*index.html*/
-.container #home
+#index, #projects
 {
     text-align: center;
 }
 
-.container #home h1 
+#index h1, #projects h1 
 {
     font-size: 7rem;
 }
 
-.container #home p 
+#index p, #projects p 
 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-top: 4rem;
+}
+
+/*leetcode_solutions*/
+#leetcode_solutions p:first-child
+{
+    font-size: 3rem;
+    margin: 1rem;
+}
+
+/*roadmap*/
+#roadmap p:first-child
+{
+    font-size: 3rem;
+    margin: 1rem;
 }
 
 /*Nav bar*/
