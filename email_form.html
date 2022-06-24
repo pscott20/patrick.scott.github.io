@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Patrick Scott's Porfolio Website</title>
+    <link href="styles/default.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div data-include="components/header.html"></div>
+    </header>
+    <main>
+      <div class="container">
+        <div id="email_form" class="flex-center flex-column">
+            <h1>Email Me</h1>
+            <form action="mailto:pescott1990@gmail.com" method="get" enctype="text/plain">
+            <label for="name" class="email_label">Your Name:
+                <input type="text" name="name" id="name" class="email_form_content" required/>
+            </label>
+            <br>
+            <label for="email" class="email_label">Email:
+                <input type="email" name="email" id="email" class="email_form_content" placeholder="your_email@email.com" required/>
+            </label>
+            <br>
+            <label class="email_label">Message:</label>
+            <br>
+            <textarea name="message" rows="12" cols="35" class="email_form_content" required minlength="10" maxlength="500"></textarea>
+            <br>
+            <input type="submit" name="submit" value="Send" id="submit_reset_btns"/>
+            <input type="reset" name="reset" value="Clear Form" id="submit_reset_btns"/>
+        </div>  
+    </div>
+    </main>
+    <footer>
+      <div data-include="components/footer.html"></div>
+    </footer>
+      <script src="scripts/include.js"></script>
+  </body>
+</html>
