@@ -22,18 +22,25 @@
     margin: 0 auto; /*As the screen gets bigger the container stays a consistent size. As the screen gets smaller the container maintains formatting.*/
 }
 
-.container h1 {
-    font-size: 4rem;
-    padding: 1rem;
+/*index.html*/
+.container #home
+{
+    text-align: center;
 }
 
-.container a {
-    padding: 0.5rem;
+.container #home h1 
+{
+    font-size: 7rem;
+}
+
+.container #home p 
+{
     font-size: 2rem;
 }
 
 /*Nav bar*/
-.header h1 {
+.header h1 
+{
   text-align: center;
   font-size: 5rem;
   padding: 2.0rem;
