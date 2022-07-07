@@ -1,0 +1,13 @@
+{
+    "Database": {
+      "dbConfig": {
+        "host": "localhost",
+        "port": 3000,
+        "dbName": "mongodb+srv://db_admin:password_admin@cluster0.ptzkd.mongodb.net/?retryWrites=true&w=majority"
+      },
+      "credit": {
+        "initialLimit": 100,
+        "initialDays": 1
+      }
+    }
+  }
